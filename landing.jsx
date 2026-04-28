@@ -616,7 +616,7 @@ function Teachers({ session, onSessionChange }) {
           <article key={i} className={`teacher-card teacher-card-${t.cat}`}>
             <div className={`teacher-card-photo ${t.photo ? "has-img" : ""}`} aria-hidden="true">
               {t.photo ? (
-                <img src={t.photo} alt={t.name} loading="lazy" />
+                <img src={`${t.photo}?v=2`} alt={t.name} loading="lazy" />
               ) : (
                 <span className="teacher-card-initial">{t.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}</span>
               )}
