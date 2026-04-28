@@ -169,14 +169,13 @@ function Ticker() {
   );
 }
 
-function Hero({ variant }) {
+function Hero({ variant, session, onSessionChange }) {
   if (variant === "split") return <HeroSplit />;
   if (variant === "editorial") return <HeroEditorial />;
-  return <HeroMarquee />;
+  return <HeroMarquee session={session} onSessionChange={onSessionChange} />;
 }
 
-function HeroMarquee() {
-  const [session, setSession] = useState(0);
+function HeroMarquee({ session, onSessionChange }) {
   const s = SESSIONS[session];
   return (
     <section className="hero hero-editorial-v2">
@@ -188,7 +187,7 @@ function HeroMarquee() {
             <button
               key={ss.id}
               className={`hero-session-pill ${session === i ? "is-active" : ""}`}
-              onClick={() => setSession(i)}
+              onClick={() => onSessionChange(i)}
             >
               <span className="hero-session-roman">{i === 0 ? "I" : "II"}</span>
               <span className="hero-session-month">{ss.month.split(" ")[0]}</span>
@@ -595,8 +594,7 @@ function GuestsBlock() {
 }
 
 // ===== Teachers — активная версия с фото =====
-function Teachers() {
-  const [session, setSession] = useState(0);
+function Teachers({ session, onSessionChange }) {
   const teachers = session === 0 ? TEACHERS : TEACHERS_AUGUST;
   const catLabel = { street: "street", contemporary: "contemp.", all: "universal" };
   return (
@@ -606,7 +604,7 @@ function Teachers() {
           <button
             key={ss.id}
             className={`teachers-session-btn ${session === i ? "is-active" : ""}`}
-            onClick={() => setSession(i)}
+            onClick={() => onSessionChange(i)}
           >
             <span className="teachers-session-roman">{i === 0 ? "I" : "II"}</span>
             <span className="teachers-session-month">{ss.month.split(" ")[0]}</span>
@@ -826,6 +824,7 @@ function Footer() {
 
 function App() {
   const [t, setT] = useTweaks(TWEAK_DEFAULTS);
+  const [session, setSession] = useState(0);
 
   useEffect(() => {
     document.documentElement.style.setProperty("--accent", t.accent);
@@ -852,7 +851,7 @@ function App() {
         <a href="#enroll" className="btn btn-primary btn-sm">Записаться</a>
       </header>
 
-      <Hero variant={t.heroVariant} />
+      <Hero variant={t.heroVariant} session={session} onSessionChange={setSession} />
 
       {t.showTicker && <Ticker />}
 
@@ -862,7 +861,7 @@ function App() {
       <AgeGroups />
       <Programs />
       <Manifesto />
-      <Teachers />
+      <Teachers session={session} onSessionChange={setSession} />
       <FunProgram />
       <Schedule />
       <Pricing />
