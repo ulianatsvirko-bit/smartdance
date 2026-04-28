@@ -110,25 +110,130 @@ const RESULTS = [
   { n: "05", t: "SUPER HERO", d: "Неделя — сертификат HERO. Все 4 недели смены — SUPER HERO + памятный приз." },
 ];
 
+const TEACHER_DETAILS = {
+  "Ксения Агафонова": {
+    role: "hip-hop / jazz funk / high heels / contemporary",
+    styles: ["Hip-hop", "Street choreo", "Jazz funk", "High heels", "Contemporary"],
+    bio: [
+      "Танцевальную карьеру начала в 4 года с бально-спортивных танцев, затем продолжила обучение и творческую практику в современных направлениях.",
+      "С 2009 года танцевала в образцовом ансамбле «Каприз», участвовала в музыкальных проектах и конкурсах, а позже начала пробовать себя как педагог.",
+      "Во время обучения в БГУКИ активно посещала мастер-классы и постепенно выработала свой подход к преподаванию.",
+      "На занятиях соединяет технику, мотивацию и творческую свободу, помогая ученикам раскрывать индивидуальность."
+    ],
+  },
+  "Вероника Гордиенко": {
+    role: "modern / contemporary / свободная пластика",
+    styles: ["Modern", "Contemporary", "Свободная пластика", "Танцевальный эксперимент"],
+    bio: [
+      "По образованию педагог. Танцевальный путь начала в дошкольном возрасте и продолжает развиваться в contemporary dance.",
+      "Участвовала в чемпионатах по современной хореографии, баттлах по импровизации и спектаклях Надежды Кашкан.",
+      "Регулярно проходит мастер-классы у российских и европейских педагогов, расширяя техническую и пластическую базу.",
+      "В работе делает акцент на грамотном движении, внимании к телу, свободе выражения и любви к процессу."
+    ],
+  },
+  "Кристина Гарон-Мосесова": {
+    role: "strip-пластика / vogue / high heels",
+    styles: ["Strip-пластика", "Vogue", "High heels", "Jazz funk"],
+    bio: [
+      "Педагог и действующий танцор, работает с направлениями vogue, high heels и strip-пластика.",
+      "В танце ценит музыкальность, пластичность, женственность и уверенность в движении.",
+      "Имеет многолетний опыт преподавания и участия в конкурсах, фестивалях и vogue balls.",
+      "На занятиях помогает танцорам раскрепощаться, лучше чувствовать музыку и смелее проявлять себя."
+    ],
+  },
+  "Денис Новиков": {
+    role: "hip-hop / break dance / street choreography",
+    styles: ["Hip-hop", "Break dance", "Street choreo", "Street style"],
+    bio: [
+      "Занимается брейк-дансом более 10 лет и постоянно развивает технику, акробатику и собственный стиль.",
+      "Участвовал во многих баттлах в Беларуси, выступал с командой Power Rangers.",
+      "В тренировках сочетает динамику, насыщенность и индивидуальный подход к каждому ученику.",
+      "Помогает танцорам раскрыться, почувствовать уверенность и показать свою личную манеру движения."
+    ],
+  },
+  "Галина Хаменко": {
+    role: "girls only / классический и современный танец / джаз",
+    styles: ["Girls Only", "Классический танец", "Современный танец", "Джаз", "Contemporary"],
+    bio: [
+      "Свою хореографическую жизнь начала с 6 лет, работала с contemporary dance, джаз-танцем, модерном, классикой и хортоном.",
+      "Окончила БГУКИ по специальности «хореографическое искусство», параллельно работала с детьми и создавала программу преподавания.",
+      "Участвовала в международных фестивалях современной хореографии и посещала мастер-классы известных педагогов.",
+      "На занятиях помогает раскрыть каждого танцора, выйти за рамки привычного и показать свои настоящие возможности."
+    ],
+  },
+  "Полина Огоновская": {
+    role: "hip-hop / street choreo / jazz funk / street jazz",
+    styles: ["Hip-hop", "Street choreo", "Jazz funk", "Street jazz", "Girls Only"],
+    bio: [
+      "Педагог-хореограф, любит обучать и создавать, соединяя концертный опыт и работу с учениками.",
+      "В SMART DANCE с момента основания: сначала как танцор концертных составов, затем как педагог.",
+      "Руководит основным концертным составом Street, много участвует в конкурсах и мастер-классах.",
+      "На занятиях поддерживает рабочую, вдохновляющую атмосферу и учит относиться к танцу осознанно и самостоятельно."
+    ],
+  },
+  "Полина Вертейко": {
+    role: "jazz funk / girls only",
+    styles: ["Jazz funk", "Girls Only"],
+    bio: [
+      "Окончила Пинский государственный колледж искусств по направлению хореографии.",
+      "Работала артистом балета и занималась преподавательской деятельностью в детской студии танца.",
+      "Участвовала в чемпионатах, фестивалях и телевизионных проектах, получая разнообразный сценический опыт.",
+      "В работе ценит энергию, дисциплину, красивую пластичную форму и хорошее настроение от движения."
+    ],
+  },
+  "Игорь Артамонов": {
+    role: "классический танец / балет",
+    styles: ["Классический танец", "Балет"],
+    bio: [
+      "Выпускник Белорусского государственного хореографического училища, с 1994 года работал в Большом театре Беларуси.",
+      "Был солистом, ведущим мастером сцены и получил звания заслуженного и народного артиста Республики Беларусь.",
+      "Работал с классическим репертуаром, участвовал в постановках и педагогической деятельности.",
+      "Передает ученикам академическую базу, сценическую культуру и точность классического танца."
+    ],
+  },
+  "Инга Жихарева": {
+    role: "hip-hop / jazz funk / modern / contemporary / jazz",
+    styles: ["Hip-hop", "Jazz funk", "Modern", "Contemporary", "Jazz", "House"],
+    bio: [
+      "Педагог-хореограф, балетмейстер-постановщик и ведущий постановщик направления SMART DANCE.",
+      "Имеет более 15 лет педагогического стажа, работает с детьми от 3 лет, подростками и взрослыми.",
+      "Ее воспитанники становились призерами и финалистами международных конкурсов, фестивалей и чемпионатов.",
+      "Проходила мастер-классы у педагогов из Москвы, Санкт-Петербурга, США и Франции, развивая современную и джазовую базу.",
+      "На занятиях соединяет требовательность, индивидуальный подход и работу на результат."
+    ],
+  },
+};
+
+function teacherProfile(base) {
+  const details = TEACHER_DETAILS[base.name];
+  return {
+    ...base,
+    role: details?.role || base.role,
+    styles: details?.styles || [],
+    bio: details?.bio || [],
+    hasDetails: Boolean(details),
+  };
+}
+
 const TEACHERS = [
-  { name: "Ксения Агафонова", role: "стрит, джаз и contemporary · hip-hop / jazz funk / heels", cat: "all", photo: "assets/teachers/ksenia.jpg" },
-  { name: "Вероника Гордиенко", role: "модерн и contemporary · свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
-  { name: "Кристина Гарон-Мосесова", role: "vogue · jazz funk", cat: "street", photo: "assets/teachers/kristina.jpg" },
-  { name: "Денис Новиков", role: "уличные стили · hip-hop / break dance / street choreography", cat: "street", photo: "assets/teachers/denis.jpg" },
-  { name: "Галина Хаменко", role: "акробатика · современная хореография", cat: "contemporary", photo: "assets/teachers/galina.jpg" },
-  { name: "Полина Огоновская", role: "уличные стили и хип-хоп", cat: "street", photo: "assets/teachers/polina-o.jpg" },
-  { name: "Полина Вертейко", role: "jazz funk · girls only", cat: "street", photo: "assets/teachers/polina-v.jpg" },
-];
+  { name: "Ксения Агафонова", role: "hip-hop / jazz funk / high heels / contemporary", cat: "all", photo: "assets/teachers/ksenia.jpg" },
+  { name: "Вероника Гордиенко", role: "modern / contemporary / свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
+  { name: "Кристина Гарон-Мосесова", role: "strip-пластика / vogue / high heels", cat: "street", photo: "assets/teachers/kristina.jpg" },
+  { name: "Денис Новиков", role: "hip-hop / break dance / street choreography", cat: "street", photo: "assets/teachers/denis.jpg" },
+  { name: "Галина Хаменко", role: "girls only / классический и современный танец / джаз", cat: "contemporary", photo: "assets/teachers/galina.jpg" },
+  { name: "Полина Огоновская", role: "hip-hop / street choreo / jazz funk / street jazz", cat: "street", photo: "assets/teachers/polina-o.jpg" },
+  { name: "Полина Вертейко", role: "jazz funk / girls only", cat: "street", photo: "assets/teachers/polina-v.jpg" },
+].map(teacherProfile);
 
 const TEACHERS_AUGUST = [
   { name: "Татьяна Шеметовец", role: "классический танец · балет", cat: "all", photo: "assets/teachers/tatiana.jpg" },
-  { name: "Игорь Артамонов", role: "уличные стили · hip-hop / krump", cat: "street", photo: "assets/teachers/igor.jpg" },
-  { name: "Инга Жихарева", role: "contemporary · модерн", cat: "contemporary", photo: "assets/teachers/inga.jpg" },
-  { name: "Кристина Гарон-Мосесова", role: "vogue · jazz funk", cat: "street", photo: "assets/teachers/kristina.jpg" },
+  { name: "Игорь Артамонов", role: "классический танец / балет", cat: "all", photo: "assets/teachers/igor.jpg" },
+  { name: "Инга Жихарева", role: "hip-hop / jazz funk / modern / contemporary / jazz", cat: "contemporary", photo: "assets/teachers/inga.jpg" },
+  { name: "Кристина Гарон-Мосесова", role: "strip-пластика / vogue / high heels", cat: "street", photo: "assets/teachers/kristina.jpg" },
   { name: "Анна Нищеменко", role: "хип-хоп · уличные направления", cat: "street", photo: "assets/teachers/anna.jpg" },
-  { name: "Полина Вертейко", role: "jazz funk · girls only", cat: "street", photo: "assets/teachers/polina-v.jpg" },
-  { name: "Вероника Гордиенко", role: "модерн и contemporary · свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
-];
+  { name: "Полина Вертейко", role: "jazz funk / girls only", cat: "street", photo: "assets/teachers/polina-v.jpg" },
+  { name: "Вероника Гордиенко", role: "modern / contemporary / свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
+].map(teacherProfile);
 
 const GUESTS = [
   "Дмитрий Залесский", "Ольга Лабовкина", "Юлия Михайлова",
@@ -595,8 +700,14 @@ function GuestsBlock() {
 
 // ===== Teachers — активная версия с фото =====
 function Teachers({ session, onSessionChange }) {
+  const [selectedTeacher, setSelectedTeacher] = useState(null);
   const teachers = session === 0 ? TEACHERS : TEACHERS_AUGUST;
   const catLabel = { street: "street", contemporary: "contemp.", all: "universal" };
+
+  useEffect(() => {
+    setSelectedTeacher(null);
+  }, [session]);
+
   return (
     <Section id="teachers" kicker="08 / педагоги" title={<>Кто будет <em>работать</em> с детьми.</>}>
       <div className="teachers-session-switch">
@@ -612,26 +723,116 @@ function Teachers({ session, onSessionChange }) {
         ))}
       </div>
       <div className="teachers-grid">
-        {teachers.map((t, i) => (
-          <article key={i} className={`teacher-card teacher-card-${t.cat}`}>
-            <div className={`teacher-card-photo ${t.photo ? "has-img" : ""}`} aria-hidden="true">
-              {t.photo ? (
-                <img src={`${t.photo}?v=2`} alt={t.name} loading="lazy" />
-              ) : (
-                <span className="teacher-card-initial">{t.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}</span>
-              )}
-              <span className="teacher-card-cat">{catLabel[t.cat]}</span>
-            </div>
-            <div className="teacher-card-body">
-              <h3 className="teacher-card-name">{t.name}</h3>
-              <p className="teacher-card-role">{t.role}</p>
-            </div>
-          </article>
-        ))}
+        {teachers.map((t, i) => {
+          const cardClass = `teacher-card teacher-card-${t.cat} ${t.hasDetails ? "is-clickable" : "is-static"}`;
+          const cardInner = (
+            <>
+              <div className={`teacher-card-photo ${t.photo ? "has-img" : ""}`} aria-hidden="true">
+                {t.photo ? (
+                  <img src={`${t.photo}?v=2`} alt={t.name} loading="lazy" />
+                ) : (
+                  <span className="teacher-card-initial">{t.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}</span>
+                )}
+                <span className="teacher-card-cat">{catLabel[t.cat]}</span>
+              </div>
+              <div className="teacher-card-body">
+                <h3 className="teacher-card-name">{t.name}</h3>
+                <p className="teacher-card-role">{t.role}</p>
+              </div>
+            </>
+          );
+
+          return t.hasDetails ? (
+            <button
+              key={`${t.name}-${i}`}
+              type="button"
+              className={cardClass}
+              onClick={() => setSelectedTeacher(t)}
+              aria-label={`Подробнее о педагоге ${t.name}`}
+            >
+              {cardInner}
+            </button>
+          ) : (
+            <article key={`${t.name}-${i}`} className={cardClass}>
+              {cardInner}
+            </article>
+          );
+        })}
       </div>
+
+      {selectedTeacher && (
+        <TeacherModal
+          teacher={selectedTeacher}
+          catLabel={catLabel}
+          onClose={() => setSelectedTeacher(null)}
+        />
+      )}
 
       <GuestsBlock />
     </Section>
+  );
+}
+
+function TeacherModal({ teacher, catLabel, onClose }) {
+  const dialogRef = useRef(null);
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    dialogRef.current?.focus();
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [onClose]);
+
+  return (
+    <div className="teacher-modal-overlay" onMouseDown={onClose}>
+      <section
+        className={`teacher-modal teacher-modal-${teacher.cat}`}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="teacher-modal-title"
+        tabIndex="-1"
+        ref={dialogRef}
+        onMouseDown={(event) => event.stopPropagation()}
+      >
+        <button className="teacher-modal-close" type="button" onClick={onClose} aria-label="Закрыть">
+          ×
+        </button>
+        <div className={`teacher-modal-photo ${teacher.photo ? "has-img" : ""}`} aria-hidden="true">
+          {teacher.photo ? (
+            <img src={`${teacher.photo}?v=2`} alt={teacher.name} />
+          ) : (
+            <span className="teacher-card-initial">{teacher.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}</span>
+          )}
+          <span className="teacher-card-cat">{catLabel[teacher.cat]}</span>
+        </div>
+        <div className="teacher-modal-body">
+          <p className="teacher-modal-kicker">педагог SMART DANCE</p>
+          <h3 id="teacher-modal-title" className="teacher-modal-title">{teacher.name}</h3>
+          <p className="teacher-modal-role">{teacher.role}</p>
+          {teacher.styles.length > 0 && (
+            <div className="teacher-modal-styles" aria-label="Направления">
+              {teacher.styles.map((style) => (
+                <span key={style} className="teacher-modal-style">{style}</span>
+              ))}
+            </div>
+          )}
+          <div className="teacher-modal-bio">
+            {teacher.bio.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 

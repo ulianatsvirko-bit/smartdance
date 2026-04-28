@@ -1833,11 +1833,48 @@ em { font-style: italic; }
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
   position: relative;
   isolation: isolate;
+  text-align: left;
+  color: inherit;
+}
+button.teacher-card {
+  font: inherit;
+  appearance: none;
+  cursor: pointer;
+}
+.teacher-card.is-static {
+  cursor: default;
 }
 .teacher-card:hover {
   transform: translateY(-6px);
   border-color: color-mix(in oklab, var(--accent) 50%, var(--hairline));
   box-shadow: 0 24px 48px -16px color-mix(in oklab, var(--ink) 30%, transparent);
+}
+.teacher-card.is-clickable:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+.teacher-card.is-clickable::after {
+  content: "Подробнее";
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  z-index: 2;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.teacher-card.is-clickable:hover::after,
+.teacher-card.is-clickable:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 .teacher-card-photo {
   aspect-ratio: 3 / 4;
@@ -1920,6 +1957,172 @@ em { font-style: italic; }
 }
 @media (max-width: 420px) {
   .teacher-card { flex-basis: 100%; }
+}
+
+.teacher-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 3vw, 40px);
+  background: color-mix(in oklab, var(--ink) 58%, transparent);
+  backdrop-filter: blur(10px);
+}
+.teacher-modal {
+  width: min(980px, 100%);
+  max-height: min(760px, calc(100vh - 32px));
+  overflow: auto;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.35fr);
+  gap: clamp(22px, 4vw, 42px);
+  padding: clamp(18px, 3vw, 30px);
+  border: 1px solid color-mix(in oklab, var(--ink) 16%, transparent);
+  border-radius: 22px;
+  background: var(--bg);
+  box-shadow: 0 34px 90px -26px color-mix(in oklab, var(--ink) 75%, transparent);
+  position: relative;
+}
+.teacher-modal:focus {
+  outline: none;
+}
+.teacher-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in oklab, var(--ink) 16%, transparent);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--title);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.teacher-modal-close:hover {
+  background: var(--ink);
+  color: var(--bg);
+  transform: rotate(6deg);
+}
+.teacher-modal-close:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.teacher-modal-photo {
+  align-self: start;
+  aspect-ratio: 3 / 4;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--ink) 6%, transparent) 0 12px,
+      color-mix(in oklab, var(--ink) 12%, transparent) 12px 13px
+    ),
+    color-mix(in oklab, var(--accent) 14%, var(--bg));
+  position: sticky;
+  top: 0;
+  display: grid;
+  place-items: center;
+}
+.teacher-modal-street .teacher-modal-photo { background-color: color-mix(in oklab, #ffe680 60%, var(--bg)); }
+.teacher-modal-contemporary .teacher-modal-photo { background-color: color-mix(in oklab, #cfe6ff 70%, var(--bg)); }
+.teacher-modal-all .teacher-modal-photo { background-color: color-mix(in oklab, var(--accent) 22%, var(--bg)); }
+.teacher-modal-photo.has-img { background: var(--soft); }
+.teacher-modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+.teacher-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: clamp(18px, 4vw, 44px);
+}
+.teacher-modal-kicker {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.teacher-modal-title {
+  margin: 0;
+  font-family: var(--title);
+  font-size: clamp(30px, 4.5vw, 54px);
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.teacher-modal-role {
+  margin: 0;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.35;
+  color: var(--muted);
+}
+.teacher-modal-styles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.teacher-modal-style {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 11px;
+  border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  background: color-mix(in oklab, var(--accent) 9%, var(--bg));
+}
+.teacher-modal-bio {
+  display: grid;
+  gap: 12px;
+  margin-top: 4px;
+}
+.teacher-modal-bio p {
+  margin: 0;
+  font-size: clamp(15px, 1.4vw, 17px);
+  line-height: 1.55;
+  color: color-mix(in oklab, var(--ink) 80%, var(--muted));
+}
+@media (max-width: 760px) {
+  .teacher-modal-overlay {
+    align-items: end;
+    padding: 10px;
+  }
+  .teacher-modal {
+    max-height: calc(100vh - 20px);
+    grid-template-columns: 1fr;
+    gap: 18px;
+    border-radius: 18px;
+  }
+  .teacher-modal-photo {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    max-height: 300px;
+  }
+  .teacher-modal-body {
+    padding-right: 0;
+  }
+  .teacher-modal-close {
+    top: 12px;
+    right: 12px;
+  }
 }
 
 /* Teachers — 3 columns by category */
