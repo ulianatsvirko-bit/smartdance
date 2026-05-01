@@ -140,7 +140,11 @@ em { font-style: italic; }
   /* What We Do - 2 columns */
   .what-section { padding: 24px var(--pad); }
   .what-title { font-size: 22px; }
-  .what-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .what-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-auto-flow: column;
+    gap: 8px; 
+  }
   .what-head { margin-bottom: 16px; }
   .what-card { 
     padding: 10px; 
