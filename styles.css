@@ -1192,15 +1192,15 @@ em { font-style: italic; }
   border-color: var(--accent);
 }
 .forwho-card-dancers.sec-highlight {
-  background: var(--accent);
-  color: var(--bg);
-  border-color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 15%, var(--bg));
+  color: var(--ink);
+  border-color: color-mix(in oklab, var(--accent) 20%, var(--hairline));
 }
-.forwho-card-dancers.sec-highlight .forwho-card-title em { color: var(--ink); }
-.forwho-card-dancers.sec-highlight .forwho-card-list li::before { color: var(--ink); }
+.forwho-card-dancers.sec-highlight .forwho-card-title em { color: var(--accent); }
+.forwho-card-dancers.sec-highlight .forwho-card-list li::before { color: var(--accent); }
 .forwho-card-dancers.sec-highlight .forwho-card-tag {
-  border-color: var(--bg);
-  color: var(--bg);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 .forwho-card-tag {
   align-self: flex-start;
