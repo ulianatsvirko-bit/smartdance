@@ -515,7 +515,7 @@ function WhatWeDo() {
 function ForWho() {
   return (
     <section className="forwho-cards">
-      <article className="forwho-card forwho-card-dancers">
+      <article className="forwho-card forwho-card-dancers sec-highlight">
         <span className="forwho-card-tag">это шанс</span>
         <h2 className="forwho-card-title">для <em>танцоров</em></h2>
         <ul className="forwho-card-list">
