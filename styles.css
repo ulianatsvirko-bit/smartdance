@@ -3455,8 +3455,8 @@ button.teacher-card {
   .manifesto-mark { font-size: 40px; }
   .manifesto-text { font-size: clamp(18px, 5vw, 26px); max-width: none; }
 
-  /* What */
-  .what-grid { grid-template-columns: 1fr; }
+  /* What (mobile two columns) */
+  .what-grid { grid-template-columns: repeat(2, 1fr); }
   .what-card { padding: 22px; min-height: 0; }
   .what-t { font-size: 18px; }
 
