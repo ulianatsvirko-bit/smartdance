@@ -81,27 +81,44 @@ em { font-style: italic; }
   .btn-sm { padding: 8px 14px; font-size: 10px; }
   
   /* Hero */
-  .hero-editorial-v2 { min-height: auto; padding: 12px var(--pad) 24px; }
-  .hero-top { justify-content: center; padding-bottom: 12px; }
-  .hero-session-pill { padding: 6px 12px; font-size: 10px; }
-  .hero-session-roman { font-size: 11px; }
-  .hero-display { margin-top: 16px; text-align: center; }
+  .hero-editorial-v2 { 
+    min-height: 100vh; 
+    padding: 12px var(--pad) 32px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-top { justify-content: center; padding-bottom: 16px; }
+  .hero-session-pill { padding: 8px 14px; font-size: 11px; }
+  .hero-session-roman { font-size: 12px; }
+  .hero-display { margin-top: auto; margin-bottom: auto; text-align: center; }
   .hero-display-line { text-align: center; }
-  .hero-display-serif { font-size: 24px; }
-  .hero-display-sub { font-size: 18px; padding-left: 0; }
-  .hero-display-brand { font-size: 36px; }
-  .hero-rule { justify-content: center; margin: 12px 0; }
-  .hero-rule-tick { width: 6px; height: 6px; }
-  .hero-rule-label { font-size: 9px; }
-  .hero-info { grid-template-columns: 1fr; gap: 16px; }
+  .hero-display-serif { font-size: 28px; }
+  .hero-display-sub { font-size: 20px; padding-left: 0; margin-top: 4px; }
+  .hero-display-brand { font-size: 42px; }
+  .hero-rule { justify-content: center; margin: 16px 0; }
+  .hero-rule-tick { width: 8px; height: 8px; }
+  .hero-rule-label { font-size: 10px; }
+  .hero-info { 
+    grid-template-columns: 1fr; 
+    gap: 16px; 
+    margin-top: auto; 
+    padding-top: 16px;
+  }
   .hero-info-col { align-items: center; text-align: center; }
-  .hero-info-kicker { font-size: 9px; }
+  .hero-info-kicker { font-size: 10px; }
   .hero-info-value { font-size: 16px; }
   .hero-info-hint { font-size: 10px; }
   .hero-info-col-cta { align-items: stretch; }
-  .hero-cta-link { padding: 12px 20px; font-size: 14px; width: 100%; justify-content: center; }
-  .hero-cta-sub { text-align: center; }
-  .hero-badge { width: 60px; height: 60px; top: 12px; right: 12px; }
+  .hero-cta-link { padding: 14px 20px; font-size: 14px; width: 100%; justify-content: center; }
+  .hero-cta-sub { text-align: center; margin-top: 8px; }
+  .hero-badge { 
+    width: 70px; 
+    height: 70px; 
+    top: 50%; 
+    right: 16px;
+    transform: translateY(-50%);
+  }
   .hero-badge-core { font-size: 14px; }
   .hero-badge-svg { display: none; }
   
