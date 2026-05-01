@@ -783,8 +783,20 @@ em { font-style: italic; }
 /* ------------ SECTION ------------ */
 .sec {
   padding: var(--gap-sec) var(--pad);
-  border-top: 1px solid var(--hairline);
+  position: relative;
 }
+.sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.sec:first-child::before { display: none; }
 .sec-head {
   display: flex;
   flex-direction: column;
