@@ -215,7 +215,7 @@ function teacherProfile(base) {
 }
 
 const TEACHERS = [
-  { name: "Ксения Агафонова", role: "hip-hop / jazz funk / high heels / contemporary", cat: "all", photo: "assets/teachers/ksenia.jpg" },
+  { name: "Ксения Агафонова", role: "hip-hop / jazz funk / contemporary", cat: "all", photo: "assets/teachers/ksenia.jpg" },
   { name: "Вероника Гордиенко", role: "modern / contemporary / свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
   { name: "Кристина Гарон-Мосесова", role: "strip-пластика / vogue / high heels", cat: "street", photo: "assets/teachers/kristina.jpg" },
   { name: "Денис Новиков", role: "hip-hop / break dance / street choreography", cat: "street", photo: "assets/teachers/denis.jpg" },
