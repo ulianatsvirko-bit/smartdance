@@ -138,21 +138,23 @@ em { font-style: italic; }
   .intro-cell-d { font-size: 13px; }
   
   /* What We Do - 2 columns */
-  .what-section { padding: 24px var(--pad); }
-  .what-title { font-size: 22px; }
-  .what-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .what-head { margin-bottom: 16px; }
+  .what-section { padding: 20px var(--pad); }
+  .what-title { font-size: 20px; }
+  .what-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .what-head { margin-bottom: 12px; }
   .what-card { 
-    padding: 10px; 
-    gap: 6px; 
-    border-radius: 12px; 
+    padding: 8px 6px; 
+    gap: 4px; 
+    border-radius: 10px; 
     min-height: auto;
+    display: flex;
+    flex-direction: column;
   }
   .what-card-1, .what-card-2, .what-card-3, .what-card-4 { transform: none; margin-top: 0; }
-  .what-n { font-size: 9px; }
-  .what-icon { font-size: 14px; }
-  .what-t { font-size: 12px; }
-  .what-d { font-size: 10px; }
+  .what-n { font-size: 8px; }
+  .what-icon { font-size: 12px; }
+  .what-t { font-size: 10px; line-height: 1.2; word-wrap: break-word; overflow-wrap: anywhere; }
+  .what-d { display: none; }
   .what-card:hover { transform: none; }
   
   /* For Who */
