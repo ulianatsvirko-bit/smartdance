@@ -997,7 +997,7 @@ function Footer() {
           <span className="kicker">контакты</span>
           <a className="foot-link" href="tel:+375447599414">+375 44 759-94-14</a>
           <a className="foot-link" href="tel:+375296155414">+375 29 615-54-14</a>
-          <a className="foot-link" href="mailto:contact@smartdance.by">contact@smartdance.by</a>
+          <a className="foot-link" href="mailto:smartdance.info@gmail.com">smartdance.info@gmail.com</a>
         </div>
         <div className="foot-col">
           <span className="kicker">адреса</span>
