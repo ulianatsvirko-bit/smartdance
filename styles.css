@@ -794,6 +794,7 @@ em { font-style: italic; }
   border-bottom: 1px solid var(--hairline);
 }
 #fun .sec-head { border-bottom: none; padding-bottom: 0; margin-bottom: clamp(20px, 3vw, 36px); }
+#pricing .sec-head { border-bottom: none; padding-bottom: 0; margin-bottom: clamp(20px, 3vw, 36px); }
 .sec-title {
   font-family: var(--title);
   font-weight: 800;
