@@ -141,7 +141,13 @@ em { font-style: italic; }
   .what-section { padding: 24px var(--pad); }
   .what-title { font-size: 22px; }
   .what-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .what-card { padding: 10px; gap: 6px; border-radius: 12px; }
+  .what-head { margin-bottom: 16px; }
+  .what-card { 
+    padding: 10px; 
+    gap: 6px; 
+    border-radius: 12px; 
+    min-height: auto;
+  }
   .what-card-1, .what-card-2, .what-card-3, .what-card-4 { transform: none; margin-top: 0; }
   .what-n { font-size: 9px; }
   .what-icon { font-size: 14px; }
