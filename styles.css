@@ -1180,6 +1180,8 @@ em { font-style: italic; }
   z-index: -1;
 }
 .forwho-card-parents::before { background: radial-gradient(circle at 80% 0%, color-mix(in oklab, var(--bg) 35%, transparent) 0%, transparent 60%); }
+.forwho-card-dancers:hover { transform: none; box-shadow: none; }
+.forwho-card-dancers:hover::before { opacity: 0; }
 .forwho-card:hover {
   transform: translateY(-8px);
   border-color: color-mix(in oklab, var(--accent) 60%, var(--hairline));
