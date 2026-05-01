@@ -1641,15 +1641,15 @@ em { font-style: italic; }
 .sessions-v2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 22px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 .session-v2 {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: clamp(20px, 2.4vw, 28px);
-  border-radius: 18px;
+  gap: 6px;
+  padding: clamp(14px, 1.6vw, 20px);
+  border-radius: 14px;
   background: var(--bg);
   border: 2px solid var(--hairline);
   transition: all 0.3s ease;
@@ -1696,7 +1696,7 @@ em { font-style: italic; }
 }
 .sessions-note {
   font-family: var(--body);
-  font-size: clamp(13px, 1vw, 15px);
+  font-size: clamp(15px, 1.3vw, 17px);
   line-height: 1.6;
   color: var(--muted);
   max-width: 78ch;
