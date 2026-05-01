@@ -1315,8 +1315,6 @@ em { font-style: italic; }
 .what-card-4 {
   transform: rotate(1deg);
   margin-top: 24px;
-  background: var(--ink);
-  color: var(--bg);
 }
 .what-card:hover {
   transform: rotate(0deg) translateY(-6px) scale(1.02);
