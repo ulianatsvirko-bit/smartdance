@@ -672,8 +672,6 @@ function TeachersV1() {
           </div>
         ))}
       </div>
-
-      <GuestsBlock />
     </Section>
   );
 }
@@ -767,8 +765,6 @@ function Teachers({ session, onSessionChange }) {
           onClose={() => setSelectedTeacher(null)}
         />
       )}
-
-      <GuestsBlock />
     </Section>
   );
 }
@@ -1064,6 +1060,7 @@ function App() {
       <Manifesto />
       <Teachers session={session} onSessionChange={setSession} />
       <FunProgram />
+      <GuestsBlock />
       <Schedule />
       <Pricing />
       <Enroll />
