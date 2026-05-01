@@ -153,8 +153,8 @@ em { font-style: italic; }
   .what-card-1, .what-card-2, .what-card-3, .what-card-4 { transform: none; margin-top: 0; }
   .what-n { font-size: 8px; }
   .what-icon { font-size: 12px; }
-  .what-t { font-size: 10px; line-height: 1.2; word-wrap: break-word; overflow-wrap: anywhere; }
-  .what-d { display: none; }
+  .what-t { font-size: 9px; line-height: 1.2; white-space: nowrap; }
+  .what-d { font-size: 8px; line-height: 1.2; }
   .what-card:hover { transform: none; }
   
   /* For Who */
