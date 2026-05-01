@@ -3074,18 +3074,18 @@ button.teacher-card {
 /* ------------ FOOTER ------------ */
 .foot {
   background: var(--bg);
-  padding: var(--gap-sec) var(--pad) 32px;
+  padding: clamp(40px, 5vw, 60px) var(--pad) 24px;
   border-top: 1px solid var(--hairline);
 }
 .foot-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 2fr;
-  gap: 40px;
-  padding-bottom: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(20px, 3vw, 32px);
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--hairline);
 }
-.foot-col { display: flex; flex-direction: column; gap: 12px; font-size: 15px; }
-.foot-col .kicker { margin-bottom: 8px; }
+.foot-col { display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+.foot-col .kicker { margin-bottom: 4px; }
 .foot-link {
   font-family: var(--display);
   font-size: 18px;
@@ -3094,7 +3094,7 @@ button.teacher-card {
 .foot-link:hover { color: var(--accent); }
 .foot-logo {
   font-family: var(--display);
-  font-size: clamp(48px, 7vw, 120px);
+  font-size: clamp(32px, 5vw, 72px);
   line-height: 0.9;
   letter-spacing: -0.02em;
   text-align: right;
@@ -3103,14 +3103,13 @@ button.teacher-card {
 .foot-bottom {
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
+  padding-top: 16px;
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 16px;
 }
 
 /* ------------ PLACEHOLDER ------------ */
