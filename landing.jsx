@@ -418,9 +418,9 @@ function HeroEditorial() {
   );
 }
 
-function Section({ id, kicker, title, children, tone }) {
+function Section({ id, kicker, title, children, tone, highlight }) {
   return (
-    <section id={id} className={`sec ${tone || ""}`}>
+    <section id={id} className={`sec ${tone || ""} ${highlight ? "sec-highlight" : ""}`}>
       <div className="sec-head">
         <span className="kicker">{kicker}</span>
         <h2 className="sec-title">{title}</h2>
@@ -624,7 +624,7 @@ function FunProgram() {
     "батутная арена", "пикники в парках", "ИЗО и творчество",
   ];
   return (
-    <Section id="fun" kicker="07 / развлекательная программа" title={<>После танцев — <em>приключения</em>.</>}>
+    <Section id="fun" kicker="07 / развлекательная программа" title={<>После танцев — <em>приключения</em>.</>} highlight>
       <div className="fun-grid">
         <div className="fun-text">
           <p className="lede">
@@ -949,10 +949,9 @@ function EnrollCta({ text, variant = "want" }) {
   );
 }
 
-// TODO: вставить реальные ссылки на Google-формы
 const ENROLL_LINKS = {
-  june: "https://forms.gle/REPLACE_WITH_JUNE_FORM",
-  august: "https://forms.gle/REPLACE_WITH_AUGUST_FORM",
+  june: "https://docs.google.com/forms/d/e/1FAIpQLSesbOY2HkLC2nDEci4i1OYNke6QnJbhJRF7XoJSSfpAmPs3fQ/viewform?usp=publish-editor",
+  august: "https://docs.google.com/forms/d/e/1FAIpQLSfOO5aEQCbtu39rV956UH536LC_50biwoaA53MOXaJ1zqD7CA/viewform?usp=publish-editor",
 };
 
 function Enroll() {
@@ -1060,7 +1059,6 @@ function App() {
       <Manifesto />
       <Teachers session={session} onSessionChange={setSession} />
       <FunProgram />
-      <GuestsBlock />
       <Schedule />
       <Pricing />
       <Enroll />

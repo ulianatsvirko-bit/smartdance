@@ -811,6 +811,54 @@ em { font-style: italic; }
   font-size: 1em;
 }
 
+.sec-highlight {
+  background: var(--accent);
+  color: var(--bg);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.sec-highlight::before,
+.sec-highlight::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 0;
+}
+.sec-highlight::before {
+  width: 380px;
+  height: 380px;
+  background: var(--accent2, #ffd93d);
+  top: -120px;
+  left: -100px;
+  animation: blob-float-a 18s ease-in-out infinite;
+}
+.sec-highlight::after {
+  width: 460px;
+  height: 460px;
+  background: var(--accent3, #7ec8ff);
+  bottom: -160px;
+  right: -140px;
+  animation: blob-float-b 22s ease-in-out infinite;
+}
+.sec-highlight > * { position: relative; z-index: 1; }
+.sec-highlight .sec-head { border-color: color-mix(in oklab, var(--bg) 30%, transparent); }
+.sec-highlight .sec-title { color: var(--bg); }
+.sec-highlight .sec-title em { color: var(--ink); }
+.sec-highlight .kicker { color: var(--bg); opacity: 0.85; }
+.sec-highlight .lede { color: var(--bg); }
+.sec-highlight .fun-chip { background: var(--bg); color: var(--ink); border-color: var(--bg); }
+.sec-highlight .fun-chip:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.sec-highlight .mono-note { color: var(--bg); opacity: 0.85; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sec-highlight::before, .sec-highlight::after { animation: none; }
+}
+
 /* ------------ INTRO ------------ */
 .intro {
   padding: clamp(56px, 7vw, 110px) var(--pad);
