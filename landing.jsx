@@ -217,7 +217,7 @@ function teacherProfile(base) {
 const TEACHERS = [
   { name: "Ксения Агафонова", role: "hip-hop / jazz funk / contemporary", cat: "all", photo: "assets/teachers/ksenia.jpg" },
   { name: "Вероника Гордиенко", role: "modern / contemporary / свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
-  { name: "Кристина Гарон-Мосесова", role: "strip-пластика / vogue / high heels", cat: "street", photo: "assets/teachers/kristina.jpg" },
+  { name: "Кристина Гарон-Мосесова", role: "strip-пластика / vogue / girls only", cat: "street", photo: "assets/teachers/kristina.jpg" },
   { name: "Денис Новиков", role: "hip-hop / break dance / street choreography", cat: "street", photo: "assets/teachers/denis.jpg" },
   { name: "Галина Хаменко", role: "girls only / классический и современный танец / джаз", cat: "contemporary", photo: "assets/teachers/galina.jpg" },
   { name: "Полина Огоновская", role: "hip-hop / street choreo / jazz funk / street jazz", cat: "street", photo: "assets/teachers/polina-o.jpg" },
@@ -228,7 +228,7 @@ const TEACHERS_AUGUST = [
   { name: "Татьяна Шеметовец", role: "классический танец · балет", cat: "all", photo: "assets/teachers/tatiana.jpg" },
   { name: "Игорь Артамонов", role: "классический танец / балет", cat: "all", photo: "assets/teachers/igor.jpg" },
   { name: "Инга Жихарева", role: "hip-hop / jazz funk / modern / contemporary / jazz", cat: "contemporary", photo: "assets/teachers/inga.jpg" },
-  { name: "Кристина Гарон-Мосесова", role: "strip-пластика / vogue / high heels", cat: "street", photo: "assets/teachers/kristina.jpg" },
+  { name: "Кристина Гарон-Мосесова", role: "strip-пластика / vogue / girls only", cat: "street", photo: "assets/teachers/kristina.jpg" },
   { name: "Анна Нищеменко", role: "хип-хоп · уличные направления", cat: "street", photo: "assets/teachers/anna.jpg" },
   { name: "Полина Вертейко", role: "jazz funk / girls only", cat: "street", photo: "assets/teachers/polina-v.jpg" },
   { name: "Вероника Гордиенко", role: "modern / contemporary / свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
