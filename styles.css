@@ -1152,7 +1152,6 @@ em { font-style: italic; }
 /* ------------ FOR WHO ------------ */
 .forwho-cards {
   padding: clamp(48px, 6vw, 100px) var(--pad);
-  background: color-mix(in oklab, var(--accent) 12%, var(--bg));
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -1192,6 +1191,17 @@ em { font-style: italic; }
   color: var(--bg);
   border-color: var(--accent);
 }
+.forwho-card-dancers.sec-highlight {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+.forwho-card-dancers.sec-highlight .forwho-card-title em { color: var(--ink); }
+.forwho-card-dancers.sec-highlight .forwho-card-list li::before { color: var(--ink); }
+.forwho-card-dancers.sec-highlight .forwho-card-tag {
+  border-color: var(--bg);
+  color: var(--bg);
+}
 .forwho-card-tag {
   align-self: flex-start;
   font-family: var(--mono);
@@ -1221,6 +1231,9 @@ em { font-style: italic; }
   color: var(--accent);
 }
 .forwho-card-parents .forwho-card-title em { color: var(--ink); }
+.forwho-card-dancers.sec-highlight .forwho-card-list li {
+  border-color: color-mix(in oklab, var(--bg) 20%, transparent);
+}
 .forwho-card-list {
   list-style: none;
   margin: 0;
