@@ -596,6 +596,9 @@ function AgeGroups() {
 function Schedule() {
   return (
     <Section id="schedule" kicker="06 / расписание" title={<>Две <em>смены</em>.</>}>
+      <p className="sessions-intro">
+        Программа одинаковая, отличаются <b>адрес</b> и <b>педагоги</b>. Выбери смену — узнаешь кто работает.
+      </p>
       <div className="sessions-v2">
         {SESSIONS.map((s, i) => (
           <article key={s.id} className={`session-v2 session-v2-${s.id}`}>
@@ -608,8 +611,7 @@ function Schedule() {
         ))}
       </div>
       <p className="sessions-note">
-        Программа в обеих сменах одинаковая — разница только в адресе: смена I проходит по {SESSIONS[0].address},
-        смена II — по {SESSIONS[1].address}. Возможно посещение 1, 2, 3 или 4 недели внутри смены в любой
+        Возможно посещение 1, 2, 3 или 4 недели внутри смены в любой
         комбинации. Формат мастер-классов — присоединиться можно в любой момент. Ребёнка можно забрать сразу
         после классов, развлекательная программа — по желанию.
       </p>
