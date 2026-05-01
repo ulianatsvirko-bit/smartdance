@@ -75,54 +75,129 @@ em { font-style: italic; }
   .nav-links { display: none; }
   .forwho-cards { grid-template-columns: 1fr; gap: 16px; }
   .forwho-card { padding: 20px; }
+  .forwho-card-title { font-size: 28px; }
+  .forwho-card-list li { font-size: 14px; }
   .sessions-v2 { grid-template-columns: 1fr; }
   .session-v2 { padding: 16px; }
   .session-v2-body { gap: 4px; }
+  .session-v2-dates { font-size: 18px; }
+  .session-v2-addr { font-size: 13px; }
   .sessions-note { font-size: 14px; }
+  .sessions-intro { font-size: 16px; }
   .sec { padding: 48px var(--pad); }
   .sec-head { padding-bottom: 16px; margin-bottom: 24px; }
   .sec-title { font-size: 24px; }
-  .hero-info { grid-template-columns: 1fr; gap: 16px; }
-  .hero-info-col-cta { align-items: flex-start; }
-  .hero-cta-link { padding: 14px 20px; font-size: 14px; }
-  .hero-display { margin-top: 24px; }
-  .hero-display-serif { font-size: 32px; }
-  .hero-display-sub { font-size: 22px; padding-left: 0; }
-  .hero-display-brand { font-size: 48px; }
-  .hero-badge { width: 80px; height: 80px; }
-  .hero-badge-core { font-size: 18px; }
+  .hero-editorial-v2 { min-height: auto; padding: 16px var(--pad) 32px; }
+  .hero-top { justify-content: center; }
+  .hero-session-pill { padding: 8px 14px; font-size: 11px; }
+  .hero-display { margin-top: 20px; text-align: center; }
+  .hero-display-line { text-align: center; }
+  .hero-display-serif { font-size: 28px; }
+  .hero-display-sub { font-size: 20px; padding-left: 0; }
+  .hero-display-brand { font-size: 42px; }
+  .hero-rule { justify-content: center; }
+  .hero-info { grid-template-columns: 1fr; gap: 20px; }
+  .hero-info-col { align-items: center; text-align: center; }
+  .hero-info-col-cta { align-items: center; }
+  .hero-cta-link { padding: 14px 24px; font-size: 14px; width: 100%; justify-content: center; }
+  .hero-cta-sub { margin-top: 8px; }
+  .hero-badge { width: 70px; height: 70px; top: 16px; right: 16px; }
+  .hero-badge-core { font-size: 16px; }
+  .hero-badge-svg { display: none; }
+  .intro { padding: 32px var(--pad); }
+  .intro-lede { font-size: 18px; }
   .intro-grid { grid-template-columns: 1fr; }
   .intro-cell { padding: 16px; }
+  .intro-cell-n { font-size: 11px; }
+  .intro-cell-t { font-size: 18px; }
+  .intro-cell-d { font-size: 14px; }
+  .what-section { padding: 32px var(--pad); }
+  .what-title { font-size: 24px; }
   .what-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
-  .what-card { padding: 12px; }
+  .what-card { min-height: auto; padding: 12px; }
   .what-card-1, .what-card-2, .what-card-3, .what-card-4 { transform: none; margin-top: 0; }
-  .what-t { font-size: 14px; }
-  .what-d { font-size: 12px; }
-  .teachers-grid { gap: 12px; }
-  .teacher-card { flex-basis: calc(50% - 6px); padding: 10px 10px 14px; }
-  .teacher-card-photo { aspect-ratio: 1 / 1.2; }
-  .teacher-card-name { font-size: 14px; }
-  .teacher-card-role { font-size: 11px; }
-  .teachers-session-switch { gap: 6px; }
+  .what-n { font-size: 10px; }
+  .what-icon { font-size: 16px; }
+  .what-t { font-size: 13px; }
+  .what-d { font-size: 11px; }
+  .teachers-grid { gap: 10px; }
+  .teacher-card { flex-basis: calc(50% - 5px); padding: 8px 8px 12px; }
+  .teacher-card-photo { aspect-ratio: 1 / 1.3; border-radius: 12px; }
+  .teacher-card-initial { font-size: 28px; }
+  .teacher-card-cat { font-size: 9px; padding: 3px 6px; }
+  .teacher-card-name { font-size: 13px; }
+  .teacher-card-role { font-size: 10px; }
+  .teachers-session-switch { gap: 6px; margin-bottom: 16px; }
   .teachers-session-btn { padding: 8px 12px; font-size: 11px; }
+  .teachers-session-roman { font-size: 12px; }
   .prog-cards { grid-template-columns: 1fr; gap: 16px; }
-  .prog-card { padding: 20px; gap: 16px; }
-  .prog-card-title { font-size: 24px; }
-  .fun-grid { grid-template-columns: 1fr; }
-  .fun-chips { flex-wrap: wrap; }
-  .fun-chip { padding: 10px 14px; font-size: 13px; }
-  .foot-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-  .foot-logo { text-align: left; font-size: 28px; }
-  .foot-bottom { flex-direction: column; gap: 8px; }
-  .prices { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .price { padding: 12px; }
-  .price-n { font-size: 12px; }
-  .price-amount { font-size: 18px; }
-  .enroll-v2-buttons { grid-template-columns: 1fr; gap: 12px; }
-  .enroll-v2-btn { padding: 16px 20px; }
-  .guests-v2 { padding: 16px; }
-  .guests-v2-title { font-size: 22px; }
-  .enroll-v2-title { font-size: 26px; }
+  .prog-card { padding: 20px; gap: 14px; }
+  .prog-card-tag { font-size: 10px; }
+  .prog-card-title { font-size: 22px; }
+  .prog-pills { flex-wrap: wrap; gap: 6px; }
+  .prog-pill { padding: 6px 10px; font-size: 11px; }
+  .prog-card-list { gap: 10px; }
+  .prog-card-list li { font-size: 14px; }
+  .fun { padding: 40px var(--pad); }
+  .fun-grid { grid-template-columns: 1fr; gap: 20px; }
+  .fun-text { order: 2; }
+  .fun-chips { flex-wrap: wrap; gap: 8px; }
+  .fun-chip { padding: 10px 14px; font-size: 12px; }
+  .fun-chip-n { font-size: 10px; }
+  .mono-note { font-size: 12px; }
+  .sched-weeks { grid-template-columns: repeat(2, 1fr); }
+  .sched-week { padding: 12px; }
+  .ages-v2 { padding: 24px var(--pad)); }
+  .ages-v2-inner { grid-template-columns: 1fr; gap: 20px; }
+  .ages-v2-title { font-size: 22px; }
+  .ages-v2-lede { font-size: 14px; }
+  .ages-v2-pills { gap: 8px; }
+  .ages-v2-pill { padding: 12px 16px; font-size: 14px; }
+  .ages-v2-pill:nth-child(2), .ages-v2-pill:nth-child(3) { margin-left: 0; }
+  .manifesto { grid-template-columns: 1fr; gap: 12px; padding: 20px var(--pad); }
+  .manifesto-mark { font-size: 36px; }
+  .manifesto-text { font-size: 16px; }
+  .results { padding-left: 20px; }
+  .result { padding: 12px 0; }
+  .result-n { font-size: 14px; }
+  .result-t { font-size: 16px; }
+  .result-d { font-size: 14px; }
+  .foot { padding: 32px var(--pad) 20px; }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 16px; padding-bottom: 16px; }
+  .foot-col { font-size: 13px; gap: 6px; }
+  .foot-col .kicker { margin-bottom: 4px; font-size: 10px; }
+  .foot-link { font-size: 14px; }
+  .foot-logo { text-align: left; font-size: 24px; }
+  .foot-bottom { flex-direction: column; gap: 8px; font-size: 10px; }
+  .prices { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .price { padding: 10px; gap: 4px; }
+  .price-n { display: none; }
+  .price-w { font-size: 12px; }
+  .price-amount { font-size: 16px; }
+  .price-inc { font-size: 11px; }
+  .pay-notes { font-size: 12px; }
+  .pay-toggle { flex-direction: column; gap: 8px; }
+  .pay-btn { padding: 12px 16px; }
+  .pay-btn span { font-size: 14px; }
+  .enroll-v2 { padding: 40px var(--pad); }
+  .enroll-v2-tag { font-size: 10px; }
+  .enroll-v2-title { font-size: 24px; }
+  .enroll-v2-lede { font-size: 14px; }
+  .enroll-v2-buttons { grid-template-columns: 1fr; gap: 10px; }
+  .enroll-v2-btn { padding: 14px 18px; flex-direction: column; gap: 4px; }
+  .enroll-v2-btn-label { font-size: 16px; }
+  .enroll-v2-btn-dates { font-size: 12px; }
+  .guests-v2 { padding: 20px; }
+  .guests-v2-tag { font-size: 10px; }
+  .guests-v2-title { font-size: 20px; }
+  .guests-v2-lede { font-size: 14px; }
+  .teachers-session-btn { font-size: 11px; }
+  .teacher-card:hover { transform: none; box-shadow: none; }
+  .prog-card:hover { transform: none; box-shadow: none; }
+  .what-card:hover { transform: none; box-shadow: none; }
+  .forwho-card:hover { transform: none; box-shadow: none; }
+  .floating-cta { bottom: 16px; right: 16px; padding: 12px 16px; font-size: 14px; }
+  .sticky-cta { bottom: 16px; right: 16px; }
 }
 @media (max-width: 380px) {
   .nav-logo img { height: 48px; }
