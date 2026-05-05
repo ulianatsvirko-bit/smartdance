@@ -866,14 +866,14 @@ function Pricing() {
           className={`pay-btn ${mode === "early" ? "is-active" : ""}`}
           onClick={() => setMode("early")}
         >
-          <span>до 15.05.2026</span>
+          <span>до 25 мая включительно</span>
           <span className="pay-btn-sub">ранняя цена</span>
         </button>
         <button
           className={`pay-btn ${mode === "late" ? "is-active" : ""}`}
           onClick={() => setMode("late")}
         >
-          <span>с 16.05.2026</span>
+          <span>с 26 мая</span>
           <span className="pay-btn-sub">стандартная</span>
         </button>
       </div>
