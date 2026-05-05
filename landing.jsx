@@ -1022,6 +1022,88 @@ function Footer() {
   );
 }
 
+// ---------------- Nav ----------------
+
+const NAV_LINKS = [
+  { href: "#what", label: "что" },
+  { href: "#programs", label: "программы" },
+  { href: "#schedule", label: "расписание" },
+  { href: "#teachers", label: "педагоги" },
+  { href: "#pricing", label: "цены" },
+];
+
+function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => { document.body.style.overflow = prev; };
+    }
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e) => { if (e.key === "Escape") setMenuOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
+  const close = () => setMenuOpen(false);
+
+  return (
+    <>
+      <header className={`nav ${scrolled ? "is-scrolled" : ""}`}>
+        <a href="#" className="nav-logo" aria-label="SMART DANCE на главную">
+          <img src="assets/logo.png" alt="SMART DANCE" />
+        </a>
+        <button
+          type="button"
+          className={`nav-burger ${menuOpen ? "is-open" : ""}`}
+          aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
+          aria-expanded={menuOpen}
+          aria-controls="nav-drawer"
+          onClick={() => setMenuOpen((v) => !v)}
+        >
+          <span /><span /><span />
+        </button>
+        <nav className="nav-links">
+          {NAV_LINKS.map((l) => (
+            <a key={l.href} href={l.href}>{l.label}</a>
+          ))}
+        </nav>
+        <a href="#enroll" className="btn btn-primary btn-sm nav-cta">Записаться</a>
+      </header>
+      <div
+        id="nav-drawer"
+        className={`nav-drawer ${menuOpen ? "is-open" : ""}`}
+        aria-hidden={!menuOpen}
+        onClick={close}
+      >
+        <div className="nav-drawer-inner" onClick={(e) => e.stopPropagation()}>
+          <nav className="nav-drawer-links">
+            {NAV_LINKS.map((l) => (
+              <a key={l.href} href={l.href} onClick={close}>{l.label}</a>
+            ))}
+          </nav>
+          <a href="#enroll" className="btn btn-primary nav-drawer-cta" onClick={close}>
+            Записаться
+          </a>
+        </div>
+      </div>
+    </>
+  );
+}
+
 // ---------------- App ----------------
 
 function App() {
@@ -1039,19 +1121,7 @@ function App() {
 
   return (
     <div className="page">
-      <header className="nav">
-        <a href="#" className="nav-logo">
-          <img src="assets/logo.png" alt="SMART DANCE" />
-        </a>
-        <nav className="nav-links">
-          <a href="#what">что</a>
-          <a href="#programs">программы</a>
-          <a href="#schedule">расписание</a>
-          <a href="#teachers">педагоги</a>
-          <a href="#pricing">цены</a>
-        </nav>
-        <a href="#enroll" className="btn btn-primary btn-sm">Записаться</a>
-      </header>
+      <Nav />
 
       <Hero variant={t.heroVariant} session={session} onSessionChange={setSession} />
 
