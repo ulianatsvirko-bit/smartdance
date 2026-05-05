@@ -3461,6 +3461,10 @@ button.teacher-card {
   .what-t { font-size: 14px; }
   .what-card { padding: 16px; }
 
+  /* Teachers (mobile two columns) */
+  .teachers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .teacher-card { width: auto; flex-basis: auto; }
+
   /* For who */
   .ticklist li { font-size: 16px; }
 
