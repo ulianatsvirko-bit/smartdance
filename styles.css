@@ -3458,7 +3458,8 @@ button.teacher-card {
   /* What (mobile two columns) */
   .what-grid { grid-template-columns: repeat(2, 1fr); }
   .what-card { padding: 22px; min-height: 0; }
-  .what-t { font-size: 18px; overflow-wrap: anywhere; hyphens: auto; }
+  .what-t { font-size: 14px; }
+  .what-card { padding: 16px; }
 
   /* For who */
   .ticklist li { font-size: 16px; }
