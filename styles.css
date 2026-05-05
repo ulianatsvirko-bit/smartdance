@@ -193,8 +193,8 @@ em { font-style: italic; }
   .manifesto-text { font-size: 15px; }
   
   /* Teachers */
-  .teachers-grid { gap: 8px; justify-content: center; }
-  .teacher-card { flex-basis: calc(50% - 4px); padding: 6px 6px 10px; border-radius: 14px; }
+  .teachers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .teacher-card { flex-basis: auto; width: 100%; padding: 6px 6px 10px; border-radius: 14px; }
   .teacher-card-photo { aspect-ratio: 1 / 1.4; border-radius: 10px; }
   .teacher-card-initial { font-size: 24px; }
   .teacher-card-cat { font-size: 8px; padding: 2px 6px; top: 6px; left: 6px; }
