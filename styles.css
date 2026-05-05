@@ -2245,7 +2245,7 @@ button.teacher-card {
   .teacher-card { flex-basis: calc((100% - 18px) / 2); }
 }
 @media (max-width: 420px) {
-  .teacher-card { flex-basis: 100%; }
+  .teacher-card { flex-basis: calc(50% - 4px); }
 }
 
 .teacher-modal-overlay {
