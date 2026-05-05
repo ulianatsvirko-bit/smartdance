@@ -3421,6 +3421,12 @@ button.teacher-card {
   .nav { padding: 6px var(--pad); }
   .btn-sm { padding: 9px 14px; font-size: 11px; }
 
+  /* Marquee ticker */
+  .ticker { font-size: 10px; padding: 8px 0; letter-spacing: 0.08em; }
+  .ticker .marquee-item { padding-right: 18px; }
+  .ticker .marquee-dot { margin-left: 18px; font-size: 8px; }
+  .ticker .marquee-track { animation-duration: 90s !important; }
+
   /* Hero */
   .hero-editorial-v2 { padding-top: 12px; padding-bottom: 36px; }
   .hero-top {
@@ -3469,15 +3475,65 @@ button.teacher-card {
   .ticklist li { font-size: 16px; }
 
   /* Programs */
-  .prog-card { padding: 22px; gap: 16px; }
+  .prog-cards { gap: 14px; }
+  .prog-card { padding: 22px; gap: 16px; border-radius: 22px; }
   .prog-card-title { font-size: clamp(26px, 7.2vw, 36px); }
   .prog-pills { gap: 6px; }
   .prog-pill { padding: 6px 12px; font-size: 12px; }
   .prog-card-list li { font-size: 14px; }
+  /* Card 1 — Contemporary: soft tint */
+  .prog-card:nth-child(1) {
+    background: color-mix(in oklab, var(--accent) 6%, var(--bg));
+    border-color: color-mix(in oklab, var(--accent) 30%, var(--hairline));
+  }
+  /* Card 2 — Street Lab: inverted dark */
+  .prog-card:nth-child(2) {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+  .prog-card:nth-child(2) .prog-card-tag { color: var(--accent); }
+  .prog-card:nth-child(2) .prog-card-title-em { color: var(--accent); }
+  .prog-card:nth-child(2) .prog-pill {
+    background: color-mix(in oklab, var(--bg) 10%, transparent);
+    color: var(--bg);
+    border: 1px solid color-mix(in oklab, var(--bg) 25%, transparent);
+  }
+  .prog-card:nth-child(2) .prog-card-list li { color: var(--bg); }
+  .prog-card:nth-child(2) .prog-card-dot { background: var(--accent); }
 
   /* Ages */
   .age-card { padding: 22px; gap: 8px; }
   .age-range { font-size: clamp(36px, 12vw, 56px); }
+
+  /* Sessions (две смены) */
+  .sessions-intro { font-size: 14px; margin-bottom: 14px; }
+  .sessions-v2 { grid-template-columns: 1fr; gap: 12px; }
+  .session-v2 {
+    padding: 18px 18px 18px 64px;
+    border-radius: 16px;
+    border-width: 2px;
+    position: relative;
+    gap: 4px;
+  }
+  .session-v2::before {
+    content: "I";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--display);
+    font-size: 40px;
+    font-style: italic;
+    line-height: 1;
+    color: var(--accent);
+    letter-spacing: -0.04em;
+  }
+  .session-v2:last-child::before { content: "II"; color: var(--accent3); font-size: 32px; }
+  .session-v2-month { font-size: 10px; letter-spacing: 0.18em; }
+  .session-v2-dates { font-size: 20px; line-height: 1.05; }
+  .session-v2-addr { font-size: 12px; line-height: 1.4; }
+  .sessions-note { font-size: 12px; }
 
   /* Schedule */
   .sched-session { padding: 18px; }
