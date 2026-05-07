@@ -588,6 +588,9 @@ function AgeGroups() {
           <span className="ages-v2-pill"><span className="ages-v2-pill-n">6 — 8</span>младшие</span>
           <span className="ages-v2-pill"><span className="ages-v2-pill-n">9 — 11</span>средние</span>
           <span className="ages-v2-pill"><span className="ages-v2-pill-n">12+</span>старшие</span>
+          <p className="ages-v2-note">
+            * Деление групп носит ознакомительный характер: финальное распределение зависит от возраста, уровня подготовки и направления танцев.
+          </p>
         </div>
       </div>
     </section>

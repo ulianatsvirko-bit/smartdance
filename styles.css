@@ -1853,11 +1853,20 @@ em { font-style: italic; }
   min-width: 80px;
 }
 .ages-v2-pill-accent .ages-v2-pill-n { color: var(--ink); }
+.ages-v2-note {
+  max-width: 36ch;
+  margin: 8px 0 0 clamp(40px, 10vw, 120px);
+  font-family: var(--body);
+  font-size: clamp(12px, 1vw, 14px);
+  line-height: 1.45;
+  color: color-mix(in oklab, var(--ink) 58%, var(--muted));
+}
 
 @media (max-width: 900px) {
   .ages-v2-inner { grid-template-columns: 1fr; gap: 32px; }
   .ages-v2-pill:nth-child(2),
   .ages-v2-pill:nth-child(3) { margin-left: 0; }
+  .ages-v2-note { margin-left: 0; }
   .ages-v2-pill { padding: 18px 22px; }
 }
 
