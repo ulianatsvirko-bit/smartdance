@@ -599,7 +599,7 @@ function Schedule() {
   return (
     <Section id="schedule" kicker="06 / расписание" title={<>Две <em>смены</em>.</>}>
       <p className="sessions-intro">
-        Программа одинаковая, отличаются <b>адрес</b> и <b>педагоги</b>. Выбери смену — узнаешь кто работает.
+        План дня одинаковый, а <b>программа классов</b>, <b>развлечения</b>, адрес и педагоги будут отличаться. Выбери смену — узнаешь кто работает.
       </p>
       <div className="sessions-v2">
         {SESSIONS.map((s, i) => (
@@ -615,7 +615,7 @@ function Schedule() {
       <p className="sessions-note">
         Возможно посещение 1, 2, 3 или 4 недели внутри смены в любой
         комбинации. Формат мастер-классов — присоединиться можно в любой момент. Ребёнка можно забрать сразу
-        после классов: обед и развлекательная программа — по желанию.
+        после классов: обед и развлекательная программа — по желанию и оплачиваются отдельно.
       </p>
     </Section>
   );
@@ -1017,6 +1017,14 @@ function Footer() {
       </div>
       <div className="foot-bottom">
         <span>© smartdance.by 2026</span>
+        <div className="foot-legal">
+          <a href="https://docs.google.com/document/d/12k52AfDds-2jBwDHtw1t6AISD2Lspk5IuHE8cNmdFTY/edit?pli=1&tab=t.0#heading=h.a227v9jey4uh" target="_blank" rel="noopener noreferrer">
+            политика конфиденциальности
+          </a>
+          <a href="https://smartdance.by/offer/" target="_blank" rel="noopener noreferrer">
+            договор оферты
+          </a>
+        </div>
         <span>центр современной хореографии · Минск</span>
       </div>
     </footer>

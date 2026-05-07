@@ -3416,6 +3416,8 @@ button.teacher-card {
 .foot-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding-top: 16px;
   font-family: var(--mono);
   font-size: 11px;
@@ -3423,6 +3425,28 @@ button.teacher-card {
   text-transform: uppercase;
   color: var(--muted);
   gap: 16px;
+}
+.foot-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.foot-legal a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink);
+  letter-spacing: 0.06em;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+.foot-legal a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* ------------ PLACEHOLDER ------------ */
