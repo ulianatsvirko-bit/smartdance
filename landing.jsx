@@ -22,7 +22,7 @@ const PROGRAMS = [
       "Балетная гимнастика — фитболы, кубы, эспандеры, балансиры",
       "Классический экзерсис и современная классика",
       "Джаз: основы стиля и постановочная работа",
-      "Release, floor work, flying low, акробатика",
+      "Акробатика и современная танцевальная техника",
       "Импровизация — теория и практика поиска своего стиля",
       "Уличные направления для пластичности и чувства ритма",
     ],
@@ -46,7 +46,7 @@ const PROGRAMS = [
 const STYLES = [
   "hip-hop", "house", "shuffle", "dancehall", "jazz-funk",
   "krump", "waacking", "vogue", "afro", "contemporary",
-  "modern", "jazz", "ballet", "floor work", "flying low",
+  "modern", "jazz", "ballet",
 ];
 
 const DAY = [
@@ -111,8 +111,8 @@ const RESULTS = [
 
 const TEACHER_DETAILS = {
   "Ксения Агафонова": {
-    role: "hip-hop / jazz funk / high heels / contemporary",
-    styles: ["Hip-hop", "Street choreo", "Jazz funk", "High heels", "Contemporary"],
+    role: "hip-hop / jazz funk / современный танец / contemporary",
+    styles: ["Hip-hop", "Street choreo", "Jazz funk", "Современный танец", "Contemporary"],
     bio: [
       "Танцевальную карьеру начала в 4 года с бально-спортивных танцев, затем продолжила обучение и творческую практику в современных направлениях.",
       "С 2009 года танцевала в образцовом ансамбле «Каприз», участвовала в музыкальных проектах и конкурсах, а позже начала пробовать себя как педагог.",
@@ -131,10 +131,10 @@ const TEACHER_DETAILS = {
     ],
   },
   "Кристина Гарон-Мосесова": {
-    role: "strip-пластика / vogue / high heels",
-    styles: ["Strip-пластика", "Vogue", "High heels", "Jazz funk"],
+    role: "vogue / girls only / современный танец",
+    styles: ["Vogue", "Girls Only", "Современный танец", "Jazz funk"],
     bio: [
-      "Педагог и действующий танцор, работает с направлениями vogue, high heels и strip-пластика.",
+      "Педагог и действующий танцор, работает с направлениями vogue, girls only и современный танец.",
       "В танце ценит музыкальность, пластичность, женственность и уверенность в движении.",
       "Имеет многолетний опыт преподавания и участия в конкурсах, фестивалях и vogue balls.",
       "На занятиях помогает танцорам раскрепощаться, лучше чувствовать музыку и смелее проявлять себя."
@@ -217,7 +217,7 @@ function teacherProfile(base) {
 const TEACHERS = [
   { name: "Ксения Агафонова", role: "hip-hop / jazz funk / contemporary", cat: "all", photo: "assets/teachers/ksenia.jpg" },
   { name: "Вероника Гордиенко", role: "modern / contemporary / свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
-  { name: "Кристина Гарон-Мосесова", role: "strip-пластика / vogue / girls only", cat: "street", photo: "assets/teachers/kristina.jpg" },
+  { name: "Кристина Гарон-Мосесова", role: "vogue / girls only", cat: "street", photo: "assets/teachers/kristina.jpg" },
   { name: "Денис Новиков", role: "hip-hop / break dance / street choreography", cat: "street", photo: "assets/teachers/denis.jpg" },
   { name: "Галина Хаменко", role: "girls only / классический и современный танец / джаз", cat: "contemporary", photo: "assets/teachers/galina.jpg" },
   { name: "Полина Огоновская", role: "hip-hop / street choreo / jazz funk / street jazz", cat: "street", photo: "assets/teachers/polina-o.jpg" },
@@ -228,7 +228,7 @@ const TEACHERS_AUGUST = [
   { name: "Татьяна Шеметовец", role: "классический танец · балет", cat: "all", photo: "assets/teachers/tatiana.jpg" },
   { name: "Игорь Артамонов", role: "классический танец / балет", cat: "all", photo: "assets/teachers/igor.jpg" },
   { name: "Инга Жихарева", role: "hip-hop / jazz funk / modern / contemporary / jazz", cat: "contemporary", photo: "assets/teachers/inga.jpg" },
-  { name: "Кристина Гарон-Мосесова", role: "strip-пластика / vogue / girls only", cat: "street", photo: "assets/teachers/kristina.jpg" },
+  { name: "Кристина Гарон-Мосесова", role: "vogue / girls only", cat: "street", photo: "assets/teachers/kristina.jpg" },
   { name: "Анна Нищеменко", role: "хип-хоп · уличные направления", cat: "street", photo: "assets/teachers/anna.jpg" },
   { name: "Полина Вертейко", role: "jazz funk / girls only", cat: "street", photo: "assets/teachers/polina-v.jpg" },
   { name: "Вероника Гордиенко", role: "modern / contemporary / свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
@@ -478,12 +478,10 @@ function WhatWeDo() {
     { n: "02", t: "Развитие тела и ОФП", d: "физическая подготовка танцора", icon: "✺" },
     { n: "03", t: "Импровизация, поиск своего стиля", d: "различные техники и практики на поиск своего стиля", icon: "❋" },
     { n: "04", t: "Танцевальные челленджи", d: "каждый день — новая задача", icon: "✸" },
-    { n: "05", t: "Фотосессии", d: "профессиональные проекты", icon: "❀" },
-    { n: "06", t: "Съёмки клипов", d: "работа в кадре и на площадке", icon: "✤" },
-    { n: "07", t: "Танцевальный фильм", d: "большой проект лаборатории", icon: "✹" },
-    { n: "08", t: "Отдых в кругу друзей", d: "образование и развлечения", icon: "✿" },
-    { n: "09", t: "Совместные мастер-классы", d: "гостевые педагоги и обмен опытом", icon: "✺" },
-    { n: "10", t: "Концертные показы", d: "финальные выступления и клип-постановки", icon: "✪" },
+    { n: "05", t: "Съёмки клипов", d: "работа в кадре и на площадке", icon: "✤" },
+    { n: "06", t: "Отдых в кругу друзей", d: "образование и развлечения", icon: "✿" },
+    { n: "07", t: "Совместные мастер-классы", d: "гостевые педагоги и обмен опытом", icon: "✺" },
+    { n: "08", t: "Концертные показы", d: "финальные выступления и творческие номера", icon: "✪" },
   ];
   return (
     <section id="what" className="what-section">
