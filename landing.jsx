@@ -445,7 +445,7 @@ function Intro() {
         <div className="intro-cell">
           <span className="intro-cell-n">14:30 — 18:00</span>
           <p className="intro-cell-t">Развлекательная программа</p>
-          <p className="intro-cell-d">Парки, музеи, аквапарк, съёмки клипов и фотосессии — каждый день новое.</p>
+          <p className="intro-cell-d">Парки, музеи, детская железная дорога, съёмки клипов и фотосессии — каждый день новое.</p>
         </div>
         <div className="intro-cell">
           <span className="intro-cell-n">пн — пт</span>
@@ -624,7 +624,7 @@ function Schedule() {
 function FunProgram() {
   const places = [
     "музеи", "планетарий", "ботанический сад", "центр океанографии",
-    "контактный зоопарк", "VR-парк", "кинотеатр", "аквапарк",
+    "контактный зоопарк", "VR-парк", "кинотеатр", "детская железная дорога",
     "батутная арена", "пикники в парках", "ИЗО и творчество",
   ];
   return (
