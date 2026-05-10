@@ -707,7 +707,6 @@ function GuestsBlock() {
 function Teachers({ session, onSessionChange }) {
   const [selectedTeacher, setSelectedTeacher] = useState(null);
   const teachers = session === 0 ? TEACHERS : TEACHERS_AUGUST;
-  const catLabel = { street: "street", contemporary: "contemp.", all: "universal" };
 
   useEffect(() => {
     setSelectedTeacher(null);
@@ -738,7 +737,6 @@ function Teachers({ session, onSessionChange }) {
                 ) : (
                   <span className="teacher-card-initial">{t.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}</span>
                 )}
-                <span className="teacher-card-cat">{catLabel[t.cat]}</span>
               </div>
               <div className="teacher-card-body">
                 <h3 className="teacher-card-name">{t.name}</h3>
@@ -768,7 +766,6 @@ function Teachers({ session, onSessionChange }) {
       {selectedTeacher && (
         <TeacherModal
           teacher={selectedTeacher}
-          catLabel={catLabel}
           onClose={() => setSelectedTeacher(null)}
         />
       )}
@@ -776,7 +773,7 @@ function Teachers({ session, onSessionChange }) {
   );
 }
 
-function TeacherModal({ teacher, catLabel, onClose }) {
+function TeacherModal({ teacher, onClose }) {
   const dialogRef = useRef(null);
 
   useEffect(() => {
@@ -815,7 +812,6 @@ function TeacherModal({ teacher, catLabel, onClose }) {
           ) : (
             <span className="teacher-card-initial">{teacher.name.split(" ").map((p) => p[0]).join("").slice(0, 2)}</span>
           )}
-          <span className="teacher-card-cat">{catLabel[teacher.cat]}</span>
         </div>
         <div className="teacher-modal-body">
           <p className="teacher-modal-kicker">педагог SMART DANCE</p>

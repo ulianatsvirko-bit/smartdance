@@ -199,7 +199,6 @@ em { font-style: italic; }
   .teacher-card { flex-basis: auto; width: 100%; padding: 6px 6px 10px; border-radius: 14px; }
   .teacher-card-photo { aspect-ratio: 1 / 1.4; border-radius: 10px; }
   .teacher-card-initial { font-size: 24px; }
-  .teacher-card-cat { font-size: 8px; padding: 2px 6px; top: 6px; left: 6px; }
   .teacher-card-name { font-size: 12px; }
   .teacher-card-role { font-size: 9px; }
   .teacher-card:hover { transform: none; box-shadow: none; }
@@ -2288,20 +2287,6 @@ button.teacher-card {
   line-height: 1;
   letter-spacing: -0.04em;
   color: color-mix(in oklab, var(--ink) 65%, transparent);
-}
-.teacher-card-cat {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: var(--bg);
-  color: var(--ink);
-  border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
 }
 .teacher-card-body {
   display: flex;
