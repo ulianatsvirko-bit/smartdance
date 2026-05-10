@@ -229,7 +229,7 @@ const TEACHERS_AUGUST = [
   { name: "Игорь Артамонов", role: "классический танец / балет", cat: "all", photo: "assets/teachers/igor.jpg" },
   { name: "Инга Жихарева", role: "hip-hop / jazz funk / modern / contemporary / jazz", cat: "contemporary", photo: "assets/teachers/inga.jpg" },
   { name: "Кристина Гарон-Мосесова", role: "vogue / girls only", cat: "street", photo: "assets/teachers/kristina.jpg" },
-  { name: "Анна Нищеменко", role: "гимнастика · акробатика", cat: "street", photo: "assets/teachers/anna.jpg" },
+  { name: "Анна Нищеменко", role: "развитие данных в балете и современной хореографии · акробатика", cat: "street", photo: "assets/teachers/anna.jpg" },
   { name: "Полина Вертейко", role: "jazz funk / girls only", cat: "street", photo: "assets/teachers/polina-v.jpg" },
   { name: "Вероника Гордиенко", role: "modern / contemporary / свободная пластика", cat: "contemporary", photo: "assets/teachers/veronika.jpg" },
 ].map(teacherProfile);
